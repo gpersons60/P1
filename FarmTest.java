@@ -3,11 +3,19 @@ package P1;
 public class FarmTest {
 
 	public static void main(String[] args) {
-		Animal Cow = new Animal();
-		System.out.println(Cow.toString());
-		Cow.move();
-		Cow.setEnergy(15);
-		System.out.println(Cow.toString());
+		Farm myFarm = new Farm();
+		for(Animal a: myFarm.getAnimals())//move each animal by random amount
+			for(int i=0; i<(int)(Math.random()*1000); i++) a.move();
+		
+		System.out.println("Before feeding: " + myFarm.getAvailableFood());
+		myFarm.feedAnimals();
+		System.out.println("After feeding: " + myFarm.getAvailableFood());
+		myFarm.makeNoise();
+		
+		myFarm.getAnimals()[0].speak("Hello!!");
+		
+		System.out.println(Arrays.toString(myFarm.getAnimals()));
+		}
 	}
 
 }
