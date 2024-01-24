@@ -28,12 +28,12 @@ public class Animal {
 		} else
 			System.out.println(getName() + " can't move. It is dead!");
 	}
-	public void speak() {
+	public void speak(String msg) {
 		if(getAlive() == true) {
-			System.out.println(getName() + " says : Hi!");
-		}else 
-			System.out.println("The dead do not speak...");
+			System.out.println(msg);
+		}
 	}
+			
 	public void sound() {
 		if (getAlive() == true) {
 			System.out.println("uknown sound");

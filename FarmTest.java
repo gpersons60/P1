@@ -1,5 +1,5 @@
 package P1;
-
+import java.util.*;
 public class FarmTest {
 
 	public static void main(String[] args) {
@@ -18,4 +18,4 @@ public class FarmTest {
 		}
 	}
 
-}
+
